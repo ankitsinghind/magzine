@@ -1,3 +1,82 @@
+/* Horizontal News Cards */
+.horizontal-news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 40px 0;
+}
+
+.horizontal-news-card {
+  display: flex;
+  background: #18181a;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  align-items: stretch;
+}
+
+.horizontal-news-card:hover {
+  box-shadow: 0 8px 32px rgba(10, 132, 255, 0.12);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.horizontal-news-img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  background: #222;
+  flex-shrink: 0;
+}
+
+.horizontal-news-content {
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.horizontal-news-content .news-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.horizontal-news-content .news-desc {
+  font-size: 1.05rem;
+  color: #b1b1b6;
+  margin-bottom: 18px;
+}
+
+.horizontal-news-content .read-more {
+  color: #0a84ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+
+.horizontal-news-content .read-more:hover {
+  color: #2997ff;
+}
+
+@media (max-width: 900px) {
+  .horizontal-news-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .horizontal-news-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .horizontal-news-content {
+    padding: 20px 16px;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -17,6 +96,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   padding: 0;
 }
+
 .logo {
   font-size: 2rem;
   font-weight: 700;
@@ -25,6 +105,7 @@ body {
   padding: 24px 0;
   display: inline-block;
 }
+
 .nav {
   float: right;
   display: flex;
@@ -32,6 +113,7 @@ body {
   align-items: center;
   height: 100%;
 }
+
 .nav-link {
   color: #fff;
   text-decoration: none;
@@ -40,6 +122,7 @@ body {
   transition: color 0.2s;
   padding: 24px 0;
 }
+
 .nav-link:hover {
   color: #0a84ff;
 }
@@ -47,17 +130,20 @@ body {
 .main-content {
   padding-top: 48px;
 }
+
 .hero {
   background: linear-gradient(90deg, #18181a 60%, #232326 100%);
   padding: 64px 0 48px 0;
   text-align: center;
 }
+
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 16px;
   color: #fff;
 }
+
 .hero-subtitle {
   font-size: 1.25rem;
   color: #b1b1b6;
@@ -71,11 +157,13 @@ body {
   color: #fff;
   letter-spacing: 1px;
 }
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+
 .news-card {
   background: #18181a;
   border-radius: 18px;
@@ -85,28 +173,33 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .news-card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 8px 32px rgba(10, 132, 255, 0.12);
 }
+
 .news-img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   background: #222;
 }
+
 .news-content {
   padding: 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .news-title {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: #fff;
 }
+
 .news-desc {
   font-size: 1rem;
   color: #b1b1b6;
@@ -117,11 +210,15 @@ body {
   text-overflow: ellipsis;
   display: -webkit-box;
   line-height: 16px;
-  max-height: 32px; /* For 2 lines */
-  -webkit-line-clamp: 2; /*for ... */
-  line-clamp: 2; /* standard property for compatibility */
+  max-height: 32px;
+  /* For 2 lines */
+  -webkit-line-clamp: 2;
+  /*for ... */
+  line-clamp: 2;
+  /* standard property for compatibility */
   -webkit-box-orient: vertical;
 }
+
 .read-more {
   color: #0a84ff;
   text-decoration: none;
@@ -129,6 +226,7 @@ body {
   align-self: flex-start;
   transition: color 0.2s;
 }
+
 .read-more:hover {
   color: #2997ff;
 }
@@ -147,13 +245,34 @@ body {
   .container {
     padding: 0 12px;
   }
+
   .hero-title {
     font-size: 2rem;
   }
+
   .section-title {
     font-size: 1.25rem;
   }
+
   .news-img {
     height: 140px;
   }
+}
+
+/*news styles*/
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+  padding: 24px 0;
+}
+
+.nav-link:hover {
+  color: #0a84ff;
+}
+
+.main-content {
+  padding-top: 48px;
 }
