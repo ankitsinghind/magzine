@@ -131,6 +131,130 @@ body {
   padding-top: 48px;
 }
 
+/* Contact page styles */
+.contact-hero {
+  padding: 64px 0 48px 0;
+}
+
+.contact-section {
+  padding: 40px 0 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-card {
+  background: #18181a;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+}
+
+.contact-info {
+  color: #b1b1b6;
+  font-size: 0.98rem;
+}
+
+.contact-info h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.contact-form label {
+  display: block;
+  margin: 12px 0 6px 0;
+  color: #e6e6e8;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2b2b2d;
+  background: #121212;
+  color: #fff;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0a84ff;
+  box-shadow: 0 6px 20px rgba(10,132,255,0.08);
+}
+
+.form-actions { margin-top: 16px; }
+
+.btn-submit {
+  background: #0a84ff;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-submit:hover { background: #2997ff; }
+
+.muted-link { color: #b1b1b6; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { margin-bottom: 12px; }
+}
+
+/* Social link styles */
+.social-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #fff;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  box-shadow: none;
+}
+
+.social:focus { outline: 2px solid rgba(10,132,255,0.18); outline-offset: 2px; }
+
+.social-twitter:hover,
+.social-twitter:focus {
+  background: #1da1f2;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(29,161,242,0.14);
+}
+
+.social-linkedin:hover,
+.social-linkedin:focus {
+  background: #0a66c2;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(10,102,194,0.14);
+}
+
+.social-instagram:hover,
+.social-instagram:focus {
+  /* subtle gradient like Instagram */
+  background: radial-gradient(circle at 30% 30%, #fccc63 0%, #f77737 35%, #c13584 65%, #405de6 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(197,65,142,0.14);
+}
+
+
 .hero {
   background: linear-gradient(90deg, #18181a 60%, #232326 100%);
   padding: 64px 0 48px 0;
