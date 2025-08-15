@@ -210,6 +210,20 @@ body {
   .contact-card { margin-bottom: 12px; }
 }
 
+/* inline form message */
+.form-message {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #b1b1b6;
+}
+.form-error {
+  color: #ffdddd;
+  background: linear-gradient(90deg, rgba(255,77,77,0.08), rgba(255,77,77,0.03));
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,77,77,0.12);
+}
+
 /* Social link styles */
 .social-list {
   display: flex;
